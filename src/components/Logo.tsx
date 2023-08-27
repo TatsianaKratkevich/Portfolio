@@ -7,8 +7,11 @@ export const Logo=()=>{
         <StyledLogo>
           
            
-             
+          
              <Icon iconId={'logo'}/>
+ 
+            
+            
 
        
          
@@ -20,7 +23,9 @@ export const Logo=()=>{
 }
 
   const StyledLogo=styled.div`
-    
+  display: flex;
+
+ 
 
     
   `

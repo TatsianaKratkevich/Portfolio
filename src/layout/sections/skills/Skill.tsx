@@ -32,7 +32,9 @@ background: #0F1624;
 width: 550px;
 height: 670px;
 flex-shrink: 0;
-margin-left: 100px;
+margin-bottom: 85px;
+
+
 `
 const StyleH=styled.h1`
     color: #FFF;
@@ -65,8 +67,8 @@ const StyleImg=styled.img`
 const StyleBtn =styled.button`
     border-radius: 83px;
 background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
-width: 200px;
-height: 60px;
+min-width: 200px;
+min-height: 60px;
 flex-shrink: 0;
 margin-bottom: 40px;
 margin-left: 25px;

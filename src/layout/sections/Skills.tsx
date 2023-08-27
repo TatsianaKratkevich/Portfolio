@@ -1,30 +1,43 @@
 import React from "react";
 import styled from "styled-components";
 import { FlexWrapper } from "../../components/FlexWrapper/FlexWrapper";
-import { SectionTitle } from "../../components/SectionTitle";
+
 import { Skill } from "./skills/Skill";
+import { Container } from "../../components/Container";
+import { SectionTitle } from "../../components/SectionTitle";
 
 
 
 export const Skills =()=>{
     return(
+        
         <SectionColor>
+       <Container>
+        <SectionTitle>Projects</SectionTitle>
 
            
-                <SectionTitle>Projects</SectionTitle>
+        
            
 
-        <FlexWrapper wrap="wrap">
+        <FlexWrapper wrap={"wrap"}  justify={"space-between"}>
+
+      
+
   <Skill title={"PROJECT 1"}/>
   <Skill title={"PROJECT 2"}/>
   <Skill title={"PROJECT 3"}/>
   <Skill title={"PROJECT 4"}/>
   
   
+
+
+  
+  
+  
   
   
 </FlexWrapper>
-
+</Container>
 
 
 
@@ -48,9 +61,18 @@ export const Skills =()=>{
 
 
 
+
     )
 }
-const SectionColor=styled.div`
-    background-color: #161D2A;
-    min-height: 100vh;
+const SectionColor=styled.section`
+    background-color: #1e2022;
+    
+    padding-top: 100px;
+    padding-bottom: 55px;
+    
 `
+
+    
+   
+    
+

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Icon } from "../../../components/icon/Icon";
+import { Container } from "../../../components/Container";
 
 
 
@@ -9,8 +10,9 @@ import { Icon } from "../../../components/icon/Icon";
 export const Footer=()=>{
     return(
         <Positions>
-       
-        
+            <Container>
+                <FFF>
+                
 <Posi>
 Call me:
 123-456-789
@@ -25,14 +27,22 @@ Call me:
 Email:
 xxx@xyz.com
 
+
 </Posi1>
-
-
 <IconsElements>
 <Icon iconId={'git'}/>
          <Icon iconId={'linkedin'}/>
-         <Icon iconId={'telegram'}/>
+         <Icon iconId={'telegram'} />
          </IconsElements>
+
+
+
+
+</FFF>
+
+
+
+         </Container>
         
 
 
@@ -41,25 +51,39 @@ xxx@xyz.com
     );
 }
 const Positions=styled.div`
-    display: flex;
-    gap: 30px;
+  
+    
     background-color: #1c1e1e;
+    
 `
 
-const Posi=styled.h1`
-    margin-top: 130px;
+const Posi=styled.p`
+  
     color: white;
     
 `
-const Posi1=styled.h1`
-    margin-top: 130px;
+const Posi1=styled.p`
+    
     color: white;
 `
 const IconsElements=styled.div`
-display: flex;
-margin-top:150px;
-margin-left: 150px;
+
+
+
+
+
 
 
     
 `
+const FFF=styled.p`
+    
+   
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   
+  
+   
+   `
+ 

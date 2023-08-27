@@ -5,16 +5,20 @@ export const Menu=()=>{
         <StyledMenu>
         <ul>
             <li>
+               <a href='#!'>  Projects</a>
                
-            Projects
+
+             
+               
+            
             </li>
             <li>
-                
-            Technologies
+            <a href='#!'> Technologies</a>
+        
             </li>
             <li>
-               
-            About me
+            <a href='#!'> About me</a>
+           
             </li>
 
         </ul>
@@ -23,26 +27,77 @@ export const Menu=()=>{
     )
 }
 const StyledMenu=styled.nav`
-ul{
-  display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-left:200px;
-   list-style: none;
-   color: #FFF;
-font-family: Poppins;
+
+    ul{
+      
+        display: flex;
+        align-items: center;
+        height: 100%;
+        gap:80px;
+
+
+
+    }
+  
+
+
+
+  
+
+
+    
+
+   li{
+    list-style: none;
+      font-family: Poppins;
 font-size: 16px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
 
+   }
+
+   li:hover{
    
+    transform: scale(120%);
     
-
+   }
+   a{
+    color: white;
+  
+   }
+a:after{
+ content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; 
+    background-color: black; 
+    transition: width 0.5s;   
 }
+a:hover:after{
+  content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px; 
+    background-color: #f4f4f4; 
+    transition: width 0ms.5;  
+    transition-duration: 0.5s;
+}  
 
 
 
+
+ 
+
+  
+  
+    
 
 
     
