@@ -85,7 +85,7 @@ const TextSpan = styled.span`
 font-family: Poppins;
 font-size: 18px;
 font-style: normal;
-font-weight: 500;
+font-weight: 400;
 line-height: normal;
 
 
