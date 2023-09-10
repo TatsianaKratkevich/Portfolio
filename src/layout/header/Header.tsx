@@ -5,6 +5,10 @@ import { Menu } from "../../components/Menu";
 import { IconsHeader } from "../../components/IconsHeader";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper/FlexWrapper";
+import { MobileMenu } from "../../components/MobileMenu";
+
+
+
 
 export const Header =()=>{
     return(
@@ -15,6 +19,7 @@ export const Header =()=>{
 
                 <Logo/>
                <Menu/>
+               <MobileMenu/>
 
             
                 <IconsHeader/>
@@ -34,11 +39,13 @@ export const Header =()=>{
 }
 const StyledHeader=styled.header`
 background-color: #0F1624;
-position: fixed;
+ position: fixed; 
 top:0;
-left:0;
+left: 0;
 right: 0;
 z-index: 888;
+
+
 
 
 

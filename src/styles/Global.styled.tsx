@@ -13,15 +13,17 @@ export const GlobalStyled = createGlobalStyle`
     box-sizing: border-box;
 }
     
-body{
-    margin: 0;
+html,body{
+     scroll-behavior: smooth;
+    margin:0;
     font-family: 'Poppins',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: ${theme.colors.font};
-  height: 100%;
+  overflow-x: hidden;  
+   min-width: 360px;
 
 }
 
@@ -37,4 +39,12 @@ section:ntx-of-type(odd){
 section:ntx-of-type(even){
     background-color: ${theme.colors.secondaryBg};
 }
+@media screen and(max-width:536px){
+  html,body{
+    
+      overflow-x: hidden;  
+
+  }  
+}
+
 `

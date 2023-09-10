@@ -1,11 +1,48 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { theme } from '../styles/Theme';
+import { Link } from 'react-scroll';
+
+
+
+const items=[
+    {
+      title:'Projects',
+      href:'projects'
+    },
+
+    {
+        title:'Technologies',
+        href:'technologies'
+      },
+
+      {
+        title:'About me',
+        href:'aboutme'
+      },
+
+
+]
+
+
 export const Menu=()=>{
     return(
         <StyledMenu>
         <ul>
-            <li>
-               <a href='#!'>  Projects</a>
+            {items.map((item)=>{
+                return <ListItem>
+                    <NavLink to={item.href}
+                    smooth={true}
+                    >{item.title}
+
+                    </NavLink>
+                </ListItem>
+            
+
+            })}
+             </ul> 
+            {/* /* <li>
+               <a href='#projects'>  Projects</a>
                
 
              
@@ -13,15 +50,15 @@ export const Menu=()=>{
             
             </li>
             <li>
-            <a href='#!'> Technologies</a>
+            <a href='#technologies'> Technologies</a>
         
             </li>
             <li>
-            <a href='#!'> About me</a>
+            <a href='#aboutme'> About me</a>
            
             </li>
 
-        </ul>
+        </ul> */} 
     </StyledMenu>
 
     )
@@ -34,20 +71,14 @@ const StyledMenu=styled.nav`
         align-items: center;
         height: 100%;
         gap:80px;
-
-
-
     }
   
-
-
-
+@media ${theme.media.tablet}{
+    display: none;
+}
   
-
-
-    
-
-   li{
+`
+const ListItem=styled.li`
     list-style: none;
       font-family: Poppins;
 font-size: 16px;
@@ -55,19 +86,16 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
 
-   }
+&:hover{
+    transform: scale(120%);  
+}
+`
+const NavLink=styled(Link)`
+    color: white; 
 
-   li:hover{
-   
-    transform: scale(120%);
-    
-   }
-   a{
-    color: white;
-  
-   }
-a:after{
- content: "";
+
+    &:after{
+        content: "";
     display: block;
     position: absolute;
     right: 0;
@@ -75,10 +103,11 @@ a:after{
     width: 0;
     height: 2px; 
     background-color: black; 
-    transition: width 0.5s;   
-}
-a:hover:after{
-  content: "";
+    transition: width 0.5s; 
+    }
+
+    &:hover:after{
+        content: "";
     width: 100%;
     display: block;
     position: absolute;
@@ -87,18 +116,6 @@ a:hover:after{
     height: 2px; 
     background-color: #f4f4f4; 
     transition: width 0ms.5;  
-    transition-duration: 0.5s;
-}  
-
-
-
-
- 
-
-  
-  
-    
-
-
-    
+    transition-duration: 0.5s;  
+    }
 `
